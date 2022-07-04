@@ -77,43 +77,8 @@
       </concept>
     </language>
   </registry>
-  <node concept="1M2fIO" id="30ppSeg5Q37">
-    <property role="3GE5qa" value="verb" />
-    <ref role="1M2myG" to="8ugh:30ppSeg4hN2" resolve="VerbWordRef" />
-    <node concept="3EP7_v" id="30ppSeg5Q38" role="1MtirG">
-      <node concept="3dgokm" id="30ppSeg5Q3c" role="3EP$qY">
-        <node concept="3clFbS" id="30ppSeg5Q3e" role="2VODD2">
-          <node concept="3clFbF" id="30ppSeg5TbZ" role="3cqZAp">
-            <node concept="2YIFZM" id="30ppSeg5TeC" role="3clFbG">
-              <ref role="37wK5l" to="35tq:~SimpleRoleScope.forNamedElements(org.jetbrains.mps.openapi.model.SNode,org.jetbrains.mps.openapi.language.SContainmentLink)" resolve="forNamedElements" />
-              <ref role="1Pybhc" to="35tq:~SimpleRoleScope" resolve="SimpleRoleScope" />
-              <node concept="2OqwBi" id="30ppSeg5Uu9" role="37wK5m">
-                <node concept="2OqwBi" id="30ppSeg5Tpw" role="2Oq$k0">
-                  <node concept="2rP1CM" id="30ppSeg5Ti5" role="2Oq$k0" />
-                  <node concept="2Xjw5R" id="30ppSeg5TFU" role="2OqNvi">
-                    <node concept="1xMEDy" id="30ppSeg5TFW" role="1xVPHs">
-                      <node concept="chp4Y" id="30ppSeg5UgI" role="ri$Ld">
-                        <ref role="cht4Q" to="8ugh:30ppSeg4S84" resolve="Dictionary" />
-                      </node>
-                    </node>
-                  </node>
-                </node>
-                <node concept="3TrEf2" id="30ppSeg5UAp" role="2OqNvi">
-                  <ref role="3Tt5mk" to="8ugh:30ppSeg5TH6" resolve="wordStore" />
-                </node>
-              </node>
-              <node concept="359W_D" id="30ppSeg5UI9" role="37wK5m">
-                <ref role="359W_E" to="8ugh:3G6hSXB$jyV" resolve="WordStore" />
-                <ref role="359W_F" to="8ugh:3G6hSXB$jyY" resolve="verbs" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
   <node concept="1M2fIO" id="30ppSeg63pQ">
-    <property role="3GE5qa" value="noun" />
+    <property role="3GE5qa" value="" />
     <ref role="1M2myG" to="8ugh:30ppSeg4hN8" resolve="NounWordRef" />
     <node concept="3EP7_v" id="30ppSeg63pR" role="1MtirG">
       <node concept="3dgokm" id="30ppSeg63pV" role="3EP$qY">

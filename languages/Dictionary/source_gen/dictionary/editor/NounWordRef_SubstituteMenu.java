@@ -50,7 +50,7 @@ public class NounWordRef_SubstituteMenu extends SubstituteMenuBase {
 
     public SMP_ReferenceScope_7zwjxw_a() {
       // that cast is needed for prevent the users from https://youtrack.jetbrains.com/issue/MPS-29051
-      super((SAbstractConcept) CONCEPTS.NounWordRef$zJ, LINKS.originalWord$3zic);
+      super((SAbstractConcept) CONCEPTS.NounWordRef$zJ, LINKS.originalWord$ho3f);
     }
     @NotNull
     @Override
@@ -92,6 +92,6 @@ public class NounWordRef_SubstituteMenu extends SubstituteMenuBase {
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink originalWord$3zic = MetaAdapterFactory.getReferenceLink(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3019678390111862L, 0x3019678390111863L, "originalWord");
+    /*package*/ static final SReferenceLink originalWord$ho3f = MetaAdapterFactory.getReferenceLink(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3019678390111cc8L, 0x197de3ddaba9503bL, "originalWord");
   }
 }

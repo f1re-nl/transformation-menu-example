@@ -12,38 +12,28 @@
       </concept>
     </language>
     <language id="1e23d605-1cdb-4db4-810f-1fa070d0e977" name="dictionary">
-      <concept id="3465915202993881604" name="dictionary.structure.Dictionary" flags="ng" index="2w2Im7" />
-      <concept id="4253165579341478079" name="dictionary.structure.VerbWord" flags="ng" index="1s_RWK" />
+      <concept id="3465915202993881604" name="dictionary.structure.Dictionary" flags="ng" index="2w2Im7">
+        <reference id="3465915202994150214" name="wordStore" index="2w3JN5" />
+      </concept>
       <concept id="4253165579341478075" name="dictionary.structure.WordStore" flags="ng" index="1s_RWO">
-        <child id="4253165579341478078" name="verbs" index="1s_RWL" />
         <child id="4253165579341478081" name="nouns" index="1s_RXe" />
       </concept>
       <concept id="4253165579341478080" name="dictionary.structure.NounWord" flags="ng" index="1s_RXf" />
     </language>
   </registry>
-  <node concept="1s_RWO" id="30ppSeg5hQV">
-    <node concept="1s_RXf" id="30ppSeg5PGS" role="1s_RXe">
-      <property role="TrG5h" value="something" />
+  <node concept="2w2Im7" id="73ADH0BTdf5">
+    <ref role="2w3JN5" node="1_XSXQFFF_7" />
+  </node>
+  <node concept="1s_RWO" id="1_XSXQFFF_7">
+    <node concept="1s_RXf" id="1_XSXQFFF_k" role="1s_RXe">
+      <property role="TrG5h" value="new" />
     </node>
-    <node concept="1s_RXf" id="30ppSeg5PGr" role="1s_RXe">
-      <property role="TrG5h" value="glass" />
+    <node concept="1s_RXf" id="1_XSXQFGsjS" role="1s_RXe">
+      <property role="TrG5h" value="add new" />
     </node>
-    <node concept="1s_RXf" id="30ppSeg5PGt" role="1s_RXe">
-      <property role="TrG5h" value="sand" />
-    </node>
-    <node concept="1s_RWK" id="30ppSeg5PGi" role="1s_RWL">
-      <property role="TrG5h" value="commit" />
-    </node>
-    <node concept="1s_RWK" id="30ppSeg5PGk" role="1s_RWL">
-      <property role="TrG5h" value="do" />
-    </node>
-    <node concept="1s_RWK" id="30ppSeg5PGn" role="1s_RWL">
-      <property role="TrG5h" value="to" />
-    </node>
-    <node concept="1s_RWK" id="30ppSeg6Ebg" role="1s_RWL">
-      <property role="TrG5h" value="heat" />
+    <node concept="1s_RXf" id="1_XSXQFGsk4" role="1s_RXe">
+      <property role="TrG5h" value="doerp" />
     </node>
   </node>
-  <node concept="2w2Im7" id="73ADH0BTdf5" />
 </model>
 

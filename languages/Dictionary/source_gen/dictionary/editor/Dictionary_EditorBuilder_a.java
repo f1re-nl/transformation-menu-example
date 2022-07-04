@@ -86,7 +86,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return LINKS.definitions$2M7c;
     }
     public SAbstractConcept getChildSConcept() {
-      return CONCEPTS.definitions$3s;
+      return CONCEPTS.Definition$3s;
     }
 
     public EditorCell createNodeCell(SNode elementNode) {
@@ -151,6 +151,6 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept definitions$3s = MetaAdapterFactory.getConcept(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3b06478f679138dcL, "dictionary.structure.definitions");
+    /*package*/ static final SConcept Definition$3s = MetaAdapterFactory.getConcept(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3b06478f679138dcL, "dictionary.structure.Definition");
   }
 }

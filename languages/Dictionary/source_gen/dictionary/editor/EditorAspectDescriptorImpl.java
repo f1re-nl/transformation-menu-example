@@ -14,6 +14,7 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import java.util.Collections;
 import jetbrains.mps.openapi.editor.descriptor.TransformationMenu;
 import jetbrains.mps.openapi.editor.descriptor.SubstituteMenu;
+import jetbrains.mps.openapi.editor.menus.style.EditorMenuItemCustomizer;
 import jetbrains.mps.lang.smodel.ConceptSwitchIndex;
 import jetbrains.mps.lang.smodel.ConceptSwitchIndexBuilder;
 import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
@@ -25,21 +26,15 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase imple
     SAbstractConcept cncpt = ((SAbstractConcept) concept);
     switch (conceptIndex.index(cncpt)) {
       case 0:
-        return Collections.<ConceptEditor>singletonList(new AWordRef_Editor());
+        return Collections.<ConceptEditor>singletonList(new Definition_Editor());
       case 1:
         return Collections.<ConceptEditor>singletonList(new Dictionary_Editor());
       case 2:
         return Collections.<ConceptEditor>singletonList(new NounWord_Editor());
       case 3:
-        return Arrays.asList(new ConceptEditor[]{new NounWordRef_Editor(), new NounWordRef_simplified_Editor()});
+        return Collections.<ConceptEditor>singletonList(new NounWordRef_Editor());
       case 4:
-        return Collections.<ConceptEditor>singletonList(new VerbWord_Editor());
-      case 5:
-        return Arrays.asList(new ConceptEditor[]{new VerbWordRef_Editor(), new VerbWordRef_simplified_Editor()});
-      case 6:
         return Collections.<ConceptEditor>singletonList(new WordStore_Editor());
-      case 7:
-        return Collections.<ConceptEditor>singletonList(new definitions_Editor());
       default:
     }
     return Collections.<ConceptEditor>emptyList();
@@ -55,13 +50,7 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase imple
     SAbstractConcept cncpt = concept;
     switch (conceptIndex1.index(cncpt)) {
       case 0:
-        return Collections.<TransformationMenu>singletonList(new AWord_TransformationMenu());
-      case 1:
-        return Collections.<TransformationMenu>singletonList(new AWordRef_TransformationMenu());
-      case 2:
         return Collections.<TransformationMenu>singletonList(new NounWordRef_TransformationMenu());
-      case 3:
-        return Collections.<TransformationMenu>singletonList(new VerbWordRef_TransformationMenu());
       default:
     }
     return Collections.<TransformationMenu>emptyList();
@@ -73,14 +62,17 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase imple
     switch (conceptIndex2.index(cncpt)) {
       case 0:
         return Collections.<SubstituteMenu>singletonList(new NounWordRef_SubstituteMenu());
-      case 1:
-        return Collections.<SubstituteMenu>singletonList(new VerbWordRef_SubstituteMenu());
       default:
     }
     return Collections.<SubstituteMenu>emptyList();
   }
+  @NotNull
+  @Override
+  public Collection<EditorMenuItemCustomizer> getEditorMenuItemCustomizers() {
+    return Arrays.asList(new EditorMenuItemCustomizer[]{new IntroduceNewNoun_Styling()});
+  }
 
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3019678390111862L), MetaIdFactory.conceptId(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3019678390138204L), MetaIdFactory.conceptId(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3b06478f679138c0L), MetaIdFactory.conceptId(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3019678390111cc8L), MetaIdFactory.conceptId(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3b06478f679138bfL), MetaIdFactory.conceptId(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3019678390111cc2L), MetaIdFactory.conceptId(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3b06478f679138bbL), MetaIdFactory.conceptId(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3b06478f679138dcL)).seal();
-  private static final ConceptSwitchIndex conceptIndex1 = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3b06478f679138bcL), MetaIdFactory.conceptId(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3019678390111862L), MetaIdFactory.conceptId(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3019678390111cc8L), MetaIdFactory.conceptId(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3019678390111cc2L)).seal();
-  private static final ConceptSwitchIndex conceptIndex2 = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3019678390111cc8L), MetaIdFactory.conceptId(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3019678390111cc2L)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3b06478f679138dcL), MetaIdFactory.conceptId(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3019678390138204L), MetaIdFactory.conceptId(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3b06478f679138c0L), MetaIdFactory.conceptId(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3019678390111cc8L), MetaIdFactory.conceptId(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3b06478f679138bbL)).seal();
+  private static final ConceptSwitchIndex conceptIndex1 = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3019678390111cc8L)).seal();
+  private static final ConceptSwitchIndex conceptIndex2 = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3019678390111cc8L)).seal();
 }

@@ -9,27 +9,19 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 
 public final class LanguageConceptSwitch {
   private final LanguageConceptIndex myIndex;
-  public static final int AWord = 0;
-  public static final int AWordRef = 1;
-  public static final int Dictionary = 2;
-  public static final int NounWord = 3;
-  public static final int NounWordRef = 4;
-  public static final int VerbWord = 5;
-  public static final int VerbWordRef = 6;
-  public static final int WordStore = 7;
-  public static final int definitions = 8;
+  public static final int Definition = 0;
+  public static final int Dictionary = 1;
+  public static final int NounWord = 2;
+  public static final int NounWordRef = 3;
+  public static final int WordStore = 4;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L);
-    builder.put(0x3b06478f679138bcL, AWord);
-    builder.put(0x3019678390111862L, AWordRef);
+    builder.put(0x3b06478f679138dcL, Definition);
     builder.put(0x3019678390138204L, Dictionary);
     builder.put(0x3b06478f679138c0L, NounWord);
     builder.put(0x3019678390111cc8L, NounWordRef);
-    builder.put(0x3b06478f679138bfL, VerbWord);
-    builder.put(0x3019678390111cc2L, VerbWordRef);
     builder.put(0x3b06478f679138bbL, WordStore);
-    builder.put(0x3b06478f679138dcL, definitions);
     myIndex = builder.seal();
   }
 

@@ -10,18 +10,13 @@ import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.smodel.adapter.ids.SConceptId;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
-import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
-  /*package*/ final ConceptDescriptor myConceptAWord = createDescriptorForAWord();
-  /*package*/ final ConceptDescriptor myConceptAWordRef = createDescriptorForAWordRef();
+  /*package*/ final ConceptDescriptor myConceptDefinition = createDescriptorForDefinition();
   /*package*/ final ConceptDescriptor myConceptDictionary = createDescriptorForDictionary();
   /*package*/ final ConceptDescriptor myConceptNounWord = createDescriptorForNounWord();
   /*package*/ final ConceptDescriptor myConceptNounWordRef = createDescriptorForNounWordRef();
-  /*package*/ final ConceptDescriptor myConceptVerbWord = createDescriptorForVerbWord();
-  /*package*/ final ConceptDescriptor myConceptVerbWordRef = createDescriptorForVerbWordRef();
   /*package*/ final ConceptDescriptor myConceptWordStore = createDescriptorForWordStore();
-  /*package*/ final ConceptDescriptor myConceptdefinitions = createDescriptorFordefinitions();
   private final LanguageConceptSwitch myIndexSwitch;
 
   public StructureAspectDescriptor() {
@@ -36,31 +31,23 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAWord, myConceptAWordRef, myConceptDictionary, myConceptNounWord, myConceptNounWordRef, myConceptVerbWord, myConceptVerbWordRef, myConceptWordStore, myConceptdefinitions);
+    return Arrays.asList(myConceptDefinition, myConceptDictionary, myConceptNounWord, myConceptNounWordRef, myConceptWordStore);
   }
 
   @Override
   @Nullable
   public ConceptDescriptor getDescriptor(SConceptId id) {
     switch (myIndexSwitch.index(id)) {
-      case LanguageConceptSwitch.AWord:
-        return myConceptAWord;
-      case LanguageConceptSwitch.AWordRef:
-        return myConceptAWordRef;
+      case LanguageConceptSwitch.Definition:
+        return myConceptDefinition;
       case LanguageConceptSwitch.Dictionary:
         return myConceptDictionary;
       case LanguageConceptSwitch.NounWord:
         return myConceptNounWord;
       case LanguageConceptSwitch.NounWordRef:
         return myConceptNounWordRef;
-      case LanguageConceptSwitch.VerbWord:
-        return myConceptVerbWord;
-      case LanguageConceptSwitch.VerbWordRef:
-        return myConceptVerbWordRef;
       case LanguageConceptSwitch.WordStore:
         return myConceptWordStore;
-      case LanguageConceptSwitch.definitions:
-        return myConceptdefinitions;
       default:
         return null;
     }
@@ -71,21 +58,13 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     return myIndexSwitch.index(c);
   }
 
-  private static ConceptDescriptor createDescriptorForAWord() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("dictionary", "AWord", 0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3b06478f679138bcL);
-    b.class_(false, true, false);
-    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
-    b.origin("r:b48f9ae8-d7d6-4e67-9b2e-8095c10a1e2b(dictionary.structure)/4253165579341478076");
+  private static ConceptDescriptor createDescriptorForDefinition() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("dictionary", "Definition", 0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3b06478f679138dcL);
+    b.class_(false, false, false);
+    b.origin("r:b48f9ae8-d7d6-4e67-9b2e-8095c10a1e2b(dictionary.structure)/4253165579341478108");
     b.version(2);
-    b.property("simplified", 0x301967839011357dL).type(PrimitiveTypeId.STRING).origin("3465915202993730941").done();
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForAWordRef() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("dictionary", "AWordRef", 0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3019678390111862L);
-    b.class_(false, true, false);
-    b.origin("r:b48f9ae8-d7d6-4e67-9b2e-8095c10a1e2b(dictionary.structure)/3465915202993723490");
-    b.version(2);
-    b.associate("originalWord", 0x3019678390111863L).target(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3b06478f679138bcL).optional(false).origin("3465915202993723491").done();
+    b.aggregate("concept", 0x3019678390111865L).target(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3019678390111cc8L).optional(false).ordered(true).multiple(false).origin("3465915202993723493").done();
+    b.aggregate("definition", 0x301967839011186aL).target(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3019678390111cc8L).optional(false).ordered(true).multiple(true).origin("3465915202993723498").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForDictionary() {
@@ -100,7 +79,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForNounWord() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("dictionary", "NounWord", 0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3b06478f679138c0L);
     b.class_(false, false, false);
-    b.super_("dictionary.structure.AWord", 0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3b06478f679138bcL);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:b48f9ae8-d7d6-4e67-9b2e-8095c10a1e2b(dictionary.structure)/4253165579341478080");
     b.version(2);
     return b.create();
@@ -108,25 +87,9 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForNounWordRef() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("dictionary", "NounWordRef", 0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3019678390111cc8L);
     b.class_(false, false, false);
-    b.super_("dictionary.structure.AWordRef", 0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3019678390111862L);
     b.origin("r:b48f9ae8-d7d6-4e67-9b2e-8095c10a1e2b(dictionary.structure)/3465915202993724616");
     b.version(2);
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForVerbWord() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("dictionary", "VerbWord", 0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3b06478f679138bfL);
-    b.class_(false, false, false);
-    b.super_("dictionary.structure.AWord", 0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3b06478f679138bcL);
-    b.origin("r:b48f9ae8-d7d6-4e67-9b2e-8095c10a1e2b(dictionary.structure)/4253165579341478079");
-    b.version(2);
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForVerbWordRef() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("dictionary", "VerbWordRef", 0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3019678390111cc2L);
-    b.class_(false, false, false);
-    b.super_("dictionary.structure.AWordRef", 0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3019678390111862L);
-    b.origin("r:b48f9ae8-d7d6-4e67-9b2e-8095c10a1e2b(dictionary.structure)/3465915202993724610");
-    b.version(2);
+    b.associate("originalWord", 0x197de3ddaba9503bL).target(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3b06478f679138c0L).optional(false).origin("1836874764244308027").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForWordStore() {
@@ -134,17 +97,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, true);
     b.origin("r:b48f9ae8-d7d6-4e67-9b2e-8095c10a1e2b(dictionary.structure)/4253165579341478075");
     b.version(2);
-    b.aggregate("verbs", 0x3b06478f679138beL).target(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3b06478f679138bfL).optional(true).ordered(true).multiple(true).origin("4253165579341478078").done();
     b.aggregate("nouns", 0x3b06478f679138c1L).target(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3b06478f679138c0L).optional(true).ordered(true).multiple(true).origin("4253165579341478081").done();
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorFordefinitions() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("dictionary", "definitions", 0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3b06478f679138dcL);
-    b.class_(false, false, false);
-    b.origin("r:b48f9ae8-d7d6-4e67-9b2e-8095c10a1e2b(dictionary.structure)/4253165579341478108");
-    b.version(2);
-    b.aggregate("concept", 0x3019678390111865L).target(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3019678390111862L).optional(false).ordered(true).multiple(false).origin("3465915202993723493").done();
-    b.aggregate("definition", 0x301967839011186aL).target(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3019678390111862L).optional(false).ordered(true).multiple(true).origin("3465915202993723498").done();
     return b.create();
   }
 }

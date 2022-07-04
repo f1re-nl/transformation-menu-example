@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="3zy0ajqo255f74f4an0wszwkdfalhqv">
-  <files names="AWordRef_Editor.java:AWordRef_EditorBuilder_a.java:AWordRef_TransformationMenu.java:AWord_TransformationMenu.java:Dictionary_Editor.java:Dictionary_EditorBuilder_a.java:Dictionary_InspectorBuilder_a.java:EditorAspectDescriptorImpl.java:NounWordRef_Editor.java:NounWordRef_EditorBuilder_a.java:NounWordRef_SubstituteMenu.java:NounWordRef_TransformationMenu.java:NounWordRef_simplified_Editor.java:NounWordRef_simplified_EditorBuilder_a.java:NounWord_Editor.java:NounWord_EditorBuilder_a.java:VerbWordRef_Editor.java:VerbWordRef_EditorBuilder_a.java:VerbWordRef_SubstituteMenu.java:VerbWordRef_TransformationMenu.java:VerbWordRef_simplified_Editor.java:VerbWordRef_simplified_EditorBuilder_a.java:VerbWord_Editor.java:VerbWord_EditorBuilder_a.java:WordStore_Editor.java:WordStore_EditorBuilder_a.java:definitions_Editor.java:definitions_EditorBuilder_a.java" />
+<product version="3" modelHash="-eno8q4203a8jvin6tho78w1wg1rel9i">
+  <files names="Definition_Editor.java:Definition_EditorBuilder_a.java:Dictionary_Editor.java:Dictionary_EditorBuilder_a.java:Dictionary_InspectorBuilder_a.java:EditorAspectDescriptorImpl.java:IntroduceNewNoun_Styling.java:NounWordRef_Editor.java:NounWordRef_EditorBuilder_a.java:NounWordRef_SubstituteMenu.java:NounWordRef_TransformationMenu.java:NounWord_Editor.java:NounWord_EditorBuilder_a.java:WordStore_Editor.java:WordStore_EditorBuilder_a.java" />
 </product>
 

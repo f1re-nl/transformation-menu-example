@@ -66,14 +66,14 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createRefCell_0() {
-    final SReferenceLink referenceLink = LINKS.originalWord$3zic;
+    final SReferenceLink referenceLink = LINKS.originalWord$ho3f;
     SReferenceCellProvider provider = new SReferenceCellProvider(getNode(), referenceLink, getEditorContext()) {
       protected EditorCell createReferenceCell(final SNode targetNode) {
         EditorCell cell = getUpdateSession().updateReferencedNodeCell(new Computable<EditorCell>() {
           public EditorCell compute() {
             return new Inline_Builder0(getEditorContext(), getNode(), targetNode).createCell();
           }
-        }, targetNode, LINKS.originalWord$UDaG);
+        }, targetNode, LINKS.originalWord$ho3f);
         CellUtil.setupIDeprecatableStyles(targetNode, cell);
         setSemanticNodeToCells(cell, getNode());
         installDeleteActions_notnull_smartReference(cell);
@@ -89,14 +89,13 @@ import org.jetbrains.mps.openapi.language.SConcept;
     };
 
     provider.setNoTargetText("<no originalWord>");
-    provider.setEmptyCellId("empty_" + "originalWord");
     EditorCell editorCell = provider.createCell();
 
     if (editorCell.getSRole() == null) {
       editorCell.setReferenceCell(true);
-      editorCell.setSRole(LINKS.originalWord$3zic);
+      editorCell.setSRole(LINKS.originalWord$ho3f);
     }
-    editorCell.setSubstituteInfo(new SReferenceSubstituteInfoSmartReferenceDecorator(new SReferenceSubstituteInfo(editorCell, referenceLink, CONCEPTS.NounWord$Ad)));
+    editorCell.setSubstituteInfo(new SReferenceSubstituteInfoSmartReferenceDecorator(new SReferenceSubstituteInfo(editorCell, referenceLink)));
     Iterable<SNode> referenceAttributes = SNodeOperations.ofConcept(new IAttributeDescriptor.AllAttributes().list(myNode), CONCEPTS.LinkAttribute$v_);
     Iterable<SNode> currentReferenceAttributes = Sequence.fromIterable(referenceAttributes).where(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
@@ -161,12 +160,10 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink originalWord$3zic = MetaAdapterFactory.getReferenceLink(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3019678390111862L, 0x3019678390111863L, "originalWord");
-    /*package*/ static final SReferenceLink originalWord$UDaG = MetaAdapterFactory.getReferenceLink(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3019678390111cc8L, 0x3019678390111cc9L, "originalWord");
+    /*package*/ static final SReferenceLink originalWord$ho3f = MetaAdapterFactory.getReferenceLink(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3019678390111cc8L, 0x197de3ddaba9503bL, "originalWord");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept NounWord$Ad = MetaAdapterFactory.getConcept(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3b06478f679138c0L, "dictionary.structure.NounWord");
     /*package*/ static final SConcept LinkAttribute$v_ = MetaAdapterFactory.getConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x2eb1ad060897da51L, "jetbrains.mps.lang.core.structure.LinkAttribute");
     /*package*/ static final SConcept PropertyAttribute$Gb = MetaAdapterFactory.getConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x2eb1ad060897da56L, "jetbrains.mps.lang.core.structure.PropertyAttribute");
   }

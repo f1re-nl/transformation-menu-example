@@ -4,6 +4,7 @@
     <projectModules>
       <modulePath path="$PROJECT_DIR$/languages/Dictionary/Dictionary.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/Sandbox/Sandbox.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/dictionary.runtime/dictionary.runtime.msd" folder="" />
     </projectModules>
   </component>
 </project>
