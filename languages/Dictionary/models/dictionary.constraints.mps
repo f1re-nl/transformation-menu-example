@@ -93,7 +93,7 @@
                   <node concept="2Xjw5R" id="30ppSeg63qp" role="2OqNvi">
                     <node concept="1xMEDy" id="30ppSeg63qq" role="1xVPHs">
                       <node concept="chp4Y" id="30ppSeg63qr" role="ri$Ld">
-                        <ref role="cht4Q" to="8ugh:30ppSeg4S84" resolve="Dictionary" />
+                        <ref role="cht4Q" to="8ugh:30ppSeg4S84" resolve="Thesaurus" />
                       </node>
                     </node>
                   </node>

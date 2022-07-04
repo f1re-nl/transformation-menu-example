@@ -27,6 +27,7 @@
         <child id="7655327340756279373" name="variables" index="1b80Z_" />
       </concept>
       <concept id="1140524381322" name="jetbrains.mps.lang.editor.structure.CellModel_ListWithRole" flags="ng" index="2czfm3">
+        <property id="1140524450557" name="separatorText" index="2czwfO" />
         <child id="1140524464360" name="cellLayout" index="2czzBx" />
       </concept>
       <concept id="1106270549637" name="jetbrains.mps.lang.editor.structure.CellLayout_Horizontal" flags="nn" index="2iRfu4" />
@@ -212,14 +213,14 @@
     </node>
   </node>
   <node concept="24kQdi" id="30ppSeg4StI">
-    <ref role="1XX52x" to="8ugh:30ppSeg4S84" resolve="Dictionary" />
+    <ref role="1XX52x" to="8ugh:30ppSeg4S84" resolve="Thesaurus" />
     <node concept="3EZMnI" id="30ppSeg4StX" role="2wV5jI">
       <node concept="3F0ifn" id="30ppSeg5hR2" role="3EZMnx">
-        <property role="3F0ifm" value="Dictionary" />
+        <property role="3F0ifm" value="Thesaurus" />
       </node>
       <node concept="2iRkQZ" id="30ppSeg4Su0" role="2iSdaV" />
       <node concept="3F2HdR" id="30ppSeg4Su4" role="3EZMnx">
-        <ref role="1NtTu8" to="8ugh:30ppSeg4S85" resolve="definitions" />
+        <ref role="1NtTu8" to="8ugh:30ppSeg4S85" resolve="synonyms" />
         <node concept="2iRkQZ" id="30ppSeg4Su5" role="2czzBx" />
       </node>
     </node>
@@ -247,22 +248,61 @@
     </node>
   </node>
   <node concept="24kQdi" id="30ppSeg5CIX">
-    <ref role="1XX52x" to="8ugh:3G6hSXB$jzs" resolve="Definition" />
+    <ref role="1XX52x" to="8ugh:3G6hSXB$jzs" resolve="Synonym" />
     <node concept="3EZMnI" id="30ppSeg5CIZ" role="2wV5jI">
       <node concept="3F1sOY" id="30ppSeg5IEq" role="3EZMnx">
         <ref role="1NtTu8" to="8ugh:30ppSeg4hx_" resolve="concept" />
       </node>
       <node concept="2iRfu4" id="30ppSeg5CJ2" role="2iSdaV" />
-      <node concept="3F0ifn" id="30ppSeg5CJv" role="3EZMnx">
-        <property role="3F0ifm" value=":" />
+      <node concept="3F0ifn" id="7Bvr$ukH_1h" role="3EZMnx">
+        <property role="3F0ifm" value="is nearly the same as" />
       </node>
       <node concept="3EZMnI" id="30ppSeg6jjp" role="3EZMnx">
         <node concept="VPM3Z" id="30ppSeg6jjr" role="3F10Kt" />
         <node concept="3F2HdR" id="30ppSeg6jj_" role="3EZMnx">
-          <ref role="1NtTu8" to="8ugh:30ppSeg4hxE" resolve="definition" />
+          <property role="2czwfO" value="," />
+          <ref role="1NtTu8" to="8ugh:30ppSeg4hxE" resolve="synonyms" />
           <node concept="2iRfu4" id="30ppSeg6jjB" role="2czzBx" />
         </node>
         <node concept="2iRfu4" id="30ppSeg6jju" role="2iSdaV" />
+      </node>
+    </node>
+  </node>
+  <node concept="3dRTYf" id="1_XSXQFG7SO">
+    <property role="TrG5h" value="IntroduceNewNoun_Styling" />
+    <node concept="3Tm1VV" id="1_XSXQFG7SP" role="1B3o_S" />
+    <node concept="KNhPl" id="1_XSXQFG7U_" role="KNiz3">
+      <ref role="2RIln$" to="8ugh:30ppSeg4hN8" resolve="NounWordRef" />
+      <node concept="3koIoq" id="1_XSXQFG7UW" role="3koIrf">
+        <ref role="3koIov" to="8ugh:1_XSXQFEl0V" resolve="originalWord" />
+      </node>
+    </node>
+    <node concept="3lBaaS" id="1_XSXQFG7SR" role="3l$a4r">
+      <node concept="3clFbS" id="1_XSXQFG7SS" role="2VODD2">
+        <node concept="3clFbJ" id="1_XSXQFG7VS" role="3cqZAp">
+          <node concept="17R0WA" id="1_XSXQFG8I_" role="3clFbw">
+            <node concept="10M0yZ" id="7Bvr$ukG$tf" role="3uHU7w">
+              <ref role="3cqZAo" to="6ni3:7Bvr$ukGz1h" resolve="DO_NOT_USE_ITEM" />
+              <ref role="1PxDUh" to="6ni3:1_XSXQFFeN$" resolve="TransformationMenuHelper" />
+            </node>
+            <node concept="2OqwBi" id="1_XSXQFG891" role="3uHU7B">
+              <node concept="3lBNg1" id="1_XSXQFG7WW" role="2Oq$k0" />
+              <node concept="liA8E" id="1_XSXQFG8nn" role="2OqNvi">
+                <ref role="37wK5l" to="fulz:6MqJAGngeyQ" resolve="getDescriptionText" />
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbS" id="1_XSXQFG7VU" role="3clFbx">
+            <node concept="3clFbF" id="1_XSXQFG8XM" role="3cqZAp">
+              <node concept="2OqwBi" id="1_XSXQFG93u" role="3clFbG">
+                <node concept="3lBNjA" id="1_XSXQFG8XL" role="2Oq$k0" />
+                <node concept="liA8E" id="1_XSXQFG9cH" role="2OqNvi">
+                  <ref role="37wK5l" to="av1m:~EditorMenuItemStyle.setStrikeout()" resolve="setStrikeout" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
     </node>
   </node>
@@ -286,7 +326,7 @@
                     <node concept="2Xjw5R" id="30ppSeg6EO1" role="2OqNvi">
                       <node concept="1xMEDy" id="30ppSeg6EO3" role="1xVPHs">
                         <node concept="chp4Y" id="30ppSeg6ERW" role="ri$Ld">
-                          <ref role="cht4Q" to="8ugh:30ppSeg4S84" resolve="Dictionary" />
+                          <ref role="cht4Q" to="8ugh:30ppSeg4S84" resolve="Thesaurus" />
                         </node>
                       </node>
                     </node>
@@ -310,7 +350,7 @@
                 <node concept="2ShNRf" id="1_XSXQFFvci" role="3clFbG">
                   <node concept="1pGfFk" id="1_XSXQFFwob" role="2ShVmc">
                     <property role="373rjd" value="true" />
-                    <ref role="37wK5l" to="6ni3:1_XSXQFFeYy" resolve="transformationMenuHelper" />
+                    <ref role="37wK5l" to="6ni3:1_XSXQFFeYy" resolve="TransformationMenuHelper" />
                     <node concept="3yx0qK" id="1_XSXQFFwpY" role="37wK5m">
                       <ref role="3cqZAo" node="30ppSeg6Ecs" resolve="wordStore" />
                     </node>
@@ -320,7 +360,7 @@
             </node>
           </node>
           <node concept="3uibUv" id="1_XSXQFFuX0" role="1tU5fm">
-            <ref role="3uigEE" to="6ni3:1_XSXQFFeN$" resolve="transformationMenuHelper" />
+            <ref role="3uigEE" to="6ni3:1_XSXQFFeN$" resolve="TransformationMenuHelper" />
           </node>
         </node>
         <node concept="IWgqT" id="30ppSeg6Ffm" role="aenpr">
@@ -368,7 +408,7 @@
                 <node concept="3clFbF" id="7Bvr$ukGzAy" role="3cqZAp">
                   <node concept="10M0yZ" id="7Bvr$ukG$Fz" role="3clFbG">
                     <ref role="1PxDUh" to="6ni3:1_XSXQFFeN$" resolve="TransformationMenuHelper" />
-                    <ref role="3cqZAo" to="6ni3:7Bvr$ukGyDW" resolve="addNewNounConstant" />
+                    <ref role="3cqZAo" to="6ni3:7Bvr$ukGyDW" resolve="ADD_NEW_NOUN" />
                   </node>
                 </node>
               </node>
@@ -392,7 +432,7 @@
                 <node concept="3clFbF" id="7Bvr$ukG$jd" role="3cqZAp">
                   <node concept="10M0yZ" id="7Bvr$ukG$ME" role="3clFbG">
                     <ref role="1PxDUh" to="6ni3:1_XSXQFFeN$" resolve="TransformationMenuHelper" />
-                    <ref role="3cqZAo" to="6ni3:7Bvr$ukGz1h" resolve="doNotUseItemConstant" />
+                    <ref role="3cqZAo" to="6ni3:7Bvr$ukGz1h" resolve="DO_NOT_USE_ITEM" />
                   </node>
                 </node>
               </node>
@@ -417,44 +457,6 @@
       </node>
     </node>
     <node concept="22hDWj" id="41kl0JCdKV4" role="22hAXT" />
-  </node>
-  <node concept="3dRTYf" id="1_XSXQFG7SO">
-    <property role="TrG5h" value="IntroduceNewNoun_Styling" />
-    <node concept="3Tm1VV" id="1_XSXQFG7SP" role="1B3o_S" />
-    <node concept="KNhPl" id="1_XSXQFG7U_" role="KNiz3">
-      <ref role="2RIln$" to="8ugh:30ppSeg4hN8" resolve="NounWordRef" />
-      <node concept="3koIoq" id="1_XSXQFG7UW" role="3koIrf">
-        <ref role="3koIov" to="8ugh:1_XSXQFEl0V" resolve="originalWord" />
-      </node>
-    </node>
-    <node concept="3lBaaS" id="1_XSXQFG7SR" role="3l$a4r">
-      <node concept="3clFbS" id="1_XSXQFG7SS" role="2VODD2">
-        <node concept="3clFbJ" id="1_XSXQFG7VS" role="3cqZAp">
-          <node concept="17R0WA" id="1_XSXQFG8I_" role="3clFbw">
-            <node concept="10M0yZ" id="7Bvr$ukG$tf" role="3uHU7w">
-              <ref role="3cqZAo" to="6ni3:7Bvr$ukGz1h" resolve="doNotUseItemConstant" />
-              <ref role="1PxDUh" to="6ni3:1_XSXQFFeN$" resolve="TransformationMenuHelper" />
-            </node>
-            <node concept="2OqwBi" id="1_XSXQFG891" role="3uHU7B">
-              <node concept="3lBNg1" id="1_XSXQFG7WW" role="2Oq$k0" />
-              <node concept="liA8E" id="1_XSXQFG8nn" role="2OqNvi">
-                <ref role="37wK5l" to="fulz:6MqJAGngeyQ" resolve="getDescriptionText" />
-              </node>
-            </node>
-          </node>
-          <node concept="3clFbS" id="1_XSXQFG7VU" role="3clFbx">
-            <node concept="3clFbF" id="1_XSXQFG8XM" role="3cqZAp">
-              <node concept="2OqwBi" id="1_XSXQFG93u" role="3clFbG">
-                <node concept="3lBNjA" id="1_XSXQFG8XL" role="2Oq$k0" />
-                <node concept="liA8E" id="1_XSXQFG9cH" role="2OqNvi">
-                  <ref role="37wK5l" to="av1m:~EditorMenuItemStyle.setStrikeout()" resolve="setStrikeout" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
   </node>
 </model>
 

@@ -63,7 +63,7 @@
   </node>
   <node concept="1TIwiD" id="3G6hSXB$jzs">
     <property role="EcuMT" value="4253165579341478108" />
-    <property role="TrG5h" value="Definition" />
+    <property role="TrG5h" value="Synonym" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="30ppSeg4hx_" role="1TKVEi">
       <property role="IQ2ns" value="3465915202993723493" />
@@ -75,7 +75,7 @@
     <node concept="1TJgyj" id="30ppSeg4hxE" role="1TKVEi">
       <property role="IQ2ns" value="3465915202993723498" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="definition" />
+      <property role="20kJfa" value="synonyms" />
       <property role="20lbJX" value="fLJekj6/_1__n" />
       <ref role="20lvS9" node="30ppSeg4hN8" resolve="NounWordRef" />
     </node>
@@ -94,15 +94,15 @@
   </node>
   <node concept="1TIwiD" id="30ppSeg4S84">
     <property role="EcuMT" value="3465915202993881604" />
-    <property role="TrG5h" value="Dictionary" />
+    <property role="TrG5h" value="Thesaurus" />
     <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="30ppSeg4S85" role="1TKVEi">
       <property role="IQ2ns" value="3465915202993881605" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="definitions" />
+      <property role="20kJfa" value="synonyms" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="3G6hSXB$jzs" resolve="Definition" />
+      <ref role="20lvS9" node="3G6hSXB$jzs" resolve="Synonym" />
     </node>
     <node concept="1TJgyj" id="30ppSeg5TH6" role="1TKVEi">
       <property role="IQ2ns" value="3465915202994150214" />
