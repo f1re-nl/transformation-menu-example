@@ -26,11 +26,16 @@
       <concept id="1197029447546" name="jetbrains.mps.baseLanguage.structure.FieldReferenceOperation" flags="nn" index="2OwXpG">
         <reference id="1197029500499" name="fieldDeclaration" index="2Oxat5" />
       </concept>
+      <concept id="1070462154015" name="jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" flags="ig" index="Wx3nA" />
       <concept id="1070475354124" name="jetbrains.mps.baseLanguage.structure.ThisExpression" flags="nn" index="Xjq3P" />
+      <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
+        <property id="1070475926801" name="value" index="Xl_RC" />
+      </concept>
       <concept id="1070534644030" name="jetbrains.mps.baseLanguage.structure.BooleanType" flags="in" index="10P_77" />
       <concept id="1068390468200" name="jetbrains.mps.baseLanguage.structure.FieldDeclaration" flags="ig" index="312cEg" />
       <concept id="1068390468198" name="jetbrains.mps.baseLanguage.structure.ClassConcept" flags="ig" index="312cEu" />
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
+        <property id="1176718929932" name="isFinal" index="3TUv4t" />
         <child id="1068431790190" name="initializer" index="33vP2m" />
       </concept>
       <concept id="1068498886296" name="jetbrains.mps.baseLanguage.structure.VariableReference" flags="nn" index="37vLTw">
@@ -139,7 +144,24 @@
       </node>
       <node concept="3Tm6S6" id="1_XSXQFFgSb" role="1B3o_S" />
     </node>
-    <node concept="2tJIrI" id="1_XSXQFFgPK" role="jymVt" />
+    <node concept="Wx3nA" id="7Bvr$ukGyDW" role="jymVt">
+      <property role="TrG5h" value="ADD_NEW_NOUN" />
+      <property role="3TUv4t" value="true" />
+      <node concept="17QB3L" id="7Bvr$ukGxCk" role="1tU5fm" />
+      <node concept="Xl_RD" id="7Bvr$ukGyhB" role="33vP2m">
+        <property role="Xl_RC" value="Add new concept to store." />
+      </node>
+      <node concept="3Tm1VV" id="7Bvr$ukG$1s" role="1B3o_S" />
+    </node>
+    <node concept="Wx3nA" id="7Bvr$ukGz1h" role="jymVt">
+      <property role="TrG5h" value="DO_NOT_USE_ITEM" />
+      <property role="3TUv4t" value="true" />
+      <node concept="17QB3L" id="7Bvr$ukGz1i" role="1tU5fm" />
+      <node concept="Xl_RD" id="7Bvr$ukGz1j" role="33vP2m">
+        <property role="Xl_RC" value="Do not use!" />
+      </node>
+      <node concept="3Tm1VV" id="7Bvr$ukG$1W" role="1B3o_S" />
+    </node>
     <node concept="3clFbW" id="1_XSXQFFeYy" role="jymVt">
       <node concept="3cqZAl" id="1_XSXQFFeY$" role="3clF45" />
       <node concept="3Tm1VV" id="1_XSXQFFeY_" role="1B3o_S" />

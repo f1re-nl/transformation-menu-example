@@ -17,7 +17,8 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
 public class TransformationMenuHelper {
   private SNode wordStore;
-
+  public static final String ADD_NEW_NOUN = "Add new concept to store.";
+  public static final String DO_NOT_USE_ITEM = "Do not use!";
   public TransformationMenuHelper(SNode wordStore) {
     this.wordStore = wordStore;
   }
@@ -30,11 +31,11 @@ public class TransformationMenuHelper {
   }
 
   public void addNewNoun(String pattern, SNode node) {
-    SNode newWord = createNounWord_4kjenv_a0a0f(pattern);
+    SNode newWord = createNounWord_4kjenv_a0a0g(pattern);
     ListSequence.fromList(SLinkOperations.getChildren(this.wordStore, LINKS.nouns$4ad6)).addElement(newWord);
     SLinkOperations.setTarget(node, LINKS.originalWord$ho3f, newWord);
   }
-  private static SNode createNounWord_4kjenv_a0a0f(String p0) {
+  private static SNode createNounWord_4kjenv_a0a0g(String p0) {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.NounWord$Ad);
     n0.setProperty(PROPS.name$MnvL, p0);
     return n0.getResult();
