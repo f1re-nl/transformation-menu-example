@@ -7,13 +7,13 @@ import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import java.util.Objects;
-import jetbrains.mps.lang.core.behavior.BaseConcept__BehaviorDescriptor;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.smodel.builder.SNodeBuilder;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
-import org.jetbrains.mps.openapi.language.SConcept;
 import org.jetbrains.mps.openapi.language.SProperty;
+import org.jetbrains.mps.openapi.language.SConcept;
 
 public class TransformationMenuHelper {
   private SNode wordStore;
@@ -24,7 +24,7 @@ public class TransformationMenuHelper {
   public boolean checkWordExists(final String pattern) {
     return (pattern != null && pattern.length() > 0) && (ListSequence.fromList(SLinkOperations.getChildren(this.wordStore, LINKS.nouns$4ad6)).findFirst(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
-        return Objects.equals(BaseConcept__BehaviorDescriptor.getPresentation_idhEwIMiw.invoke(it), pattern);
+        return Objects.equals(SPropertyOperations.getString(it, PROPS.name$MnvL), pattern);
       }
     }) == null);
   }
@@ -45,11 +45,11 @@ public class TransformationMenuHelper {
     /*package*/ static final SReferenceLink originalWord$ho3f = MetaAdapterFactory.getReferenceLink(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3019678390111cc8L, 0x197de3ddaba9503bL, "originalWord");
   }
 
-  private static final class CONCEPTS {
-    /*package*/ static final SConcept NounWord$Ad = MetaAdapterFactory.getConcept(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3b06478f679138c0L, "dictionary.structure.NounWord");
-  }
-
   private static final class PROPS {
     /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
+  }
+
+  private static final class CONCEPTS {
+    /*package*/ static final SConcept NounWord$Ad = MetaAdapterFactory.getConcept(0x1e23d6051cdb4db4L, 0x810f1fa070d0e977L, 0x3b06478f679138c0L, "dictionary.structure.NounWord");
   }
 }

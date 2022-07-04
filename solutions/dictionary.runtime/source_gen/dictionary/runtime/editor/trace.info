@@ -12,7 +12,7 @@
     <file name="TransformationMenuHelper.java">
       <node id="1836874764244553176" at="19,0,20,0" concept="2" trace="wordStore" />
       <node id="1836874764244551632" at="21,52,22,31" concept="1" />
-      <node id="3465915202994374636" at="26,39,27,109" concept="5" />
+      <node id="3465915202994374636" at="26,39,27,91" concept="5" />
       <node id="3465915202994388077" at="32,54,33,57" concept="4" />
       <node id="3465915202994388369" at="33,57,34,109" concept="1" />
       <node id="3465915202994421529" at="34,109,35,70" concept="1" />
@@ -21,8 +21,8 @@
       <node id="1836874764244580850" at="39,40,40,26" concept="5" />
       <node id="1836874764244544740" at="44,0,45,0" concept="6" trace="nouns$4ad6" />
       <node id="1836874764244544740" at="45,0,46,0" concept="6" trace="originalWord$ho3f" />
-      <node id="1836874764244544740" at="49,0,50,0" concept="6" trace="NounWord$Ad" />
-      <node id="1836874764244544740" at="53,0,54,0" concept="6" trace="name$MnvL" />
+      <node id="1836874764244544740" at="49,0,50,0" concept="6" trace="name$MnvL" />
+      <node id="1836874764244544740" at="53,0,54,0" concept="6" trace="NounWord$Ad" />
       <node id="1836874764244545442" at="21,0,24,0" concept="0" trace="TransformationMenuHelper#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
       <node id="3465915202994374133" at="26,0,29,0" concept="3" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
       <node id="1836874764244816238" at="24,56,29,16" concept="5" />
@@ -30,7 +30,7 @@
       <node id="1836874764244580850" at="37,0,42,0" concept="7" trace="createNounWord_4kjenv_a0a0f#(Ljava/lang/String;)Lorg/jetbrains/mps/openapi/model/SNode;" />
       <node id="1836874764244545297" at="24,0,31,0" concept="3" trace="checkWordExists#(Ljava/lang/String;)Z" />
       <scope id="1836874764244545446" at="21,52,22,31" />
-      <scope id="3465915202994374134" at="26,39,27,109" />
+      <scope id="3465915202994374134" at="26,39,27,91" />
       <scope id="1836874764244545442" at="21,0,24,0">
         <var name="wordStore" id="1836874764244546409" />
       </scope>
@@ -54,8 +54,8 @@
       <scope id="1836874764244545297" at="24,0,31,0">
         <var name="pattern" id="1836874764244559351" />
       </scope>
-      <unit id="1836874764244544740" at="48,0,51,0" name="dictionary.runtime.editor.TransformationMenuHelper$CONCEPTS" />
-      <unit id="1836874764244544740" at="52,0,55,0" name="dictionary.runtime.editor.TransformationMenuHelper$PROPS" />
+      <unit id="1836874764244544740" at="48,0,51,0" name="dictionary.runtime.editor.TransformationMenuHelper$PROPS" />
+      <unit id="1836874764244544740" at="52,0,55,0" name="dictionary.runtime.editor.TransformationMenuHelper$CONCEPTS" />
       <unit id="3465915202994374133" at="25,156,29,5" name="dictionary.runtime.editor.TransformationMenuHelper$1" />
       <unit id="1836874764244544740" at="43,0,47,0" name="dictionary.runtime.editor.TransformationMenuHelper$LINKS" />
       <unit id="1836874764244544740" at="18,0,56,0" name="dictionary.runtime.editor.TransformationMenuHelper" />

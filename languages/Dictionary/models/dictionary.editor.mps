@@ -36,12 +36,6 @@
       <concept id="1080736578640" name="jetbrains.mps.lang.editor.structure.BaseEditorComponent" flags="ig" index="2wURMF">
         <child id="1080736633877" name="cellModel" index="2wV5jI" />
       </concept>
-      <concept id="5944657839000868711" name="jetbrains.mps.lang.editor.structure.ConceptEditorContextHints" flags="ig" index="2ABfQD">
-        <child id="5944657839000877563" name="hints" index="2ABdcP" />
-      </concept>
-      <concept id="5944657839003601246" name="jetbrains.mps.lang.editor.structure.ConceptEditorHintDeclaration" flags="ig" index="2BsEeg">
-        <property id="168363875802087287" name="showInUI" index="2gpH_U" />
-      </concept>
       <concept id="1638911550608610798" name="jetbrains.mps.lang.editor.structure.QueryFunction_TransformationMenu_Execute" flags="ig" index="IWg2L" />
       <concept id="1638911550608610278" name="jetbrains.mps.lang.editor.structure.TransformationMenuPart_Action" flags="ng" index="IWgqT">
         <child id="6202297022026447496" name="canExecuteFunction" index="2jiSrf" />
@@ -290,17 +284,6 @@
         </node>
         <node concept="2iRfu4" id="30ppSeg6jju" role="2iSdaV" />
       </node>
-    </node>
-  </node>
-  <node concept="2ABfQD" id="30ppSeg4hOw">
-    <property role="TrG5h" value="OriginalWordProjectionHint" />
-    <node concept="2BsEeg" id="30ppSeg4hOx" role="2ABdcP">
-      <property role="2gpH_U" value="true" />
-      <property role="TrG5h" value="original" />
-    </node>
-    <node concept="2BsEeg" id="30ppSeg4hOz" role="2ABdcP">
-      <property role="2gpH_U" value="true" />
-      <property role="TrG5h" value="simplified" />
     </node>
   </node>
   <node concept="3ICUPy" id="30ppSeg6Ebv">
